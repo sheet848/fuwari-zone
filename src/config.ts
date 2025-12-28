@@ -64,7 +64,7 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "Gmail",
-			icon: "fa7-regular:envelope", // Visit https://icones.js.org/ for icon codes
+			icon: "fa6-brands:google", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "mailto:sheetalnaik848@gmail.com",
