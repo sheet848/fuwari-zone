@@ -3,7 +3,7 @@ title: React Admin Dashboard
 published: 2025-07-10
 tags: [Markdown, Blogging, Demo]
 category: Project
-draft: false
+draft: true
 ---
 
 # Building a Production-Ready React Admin Dashboard: A Complete Journey
