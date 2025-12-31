@@ -62,6 +62,7 @@ export const profileConfig: ProfileConfig = {
 	name: "Sheetal Naik",
 	bio: "Frontend Developer",
 	status: "Coding, Googling, learning, repeating — and writing about the interesting bits.",
+	staticon: "fa6-regular:circle-dot",
 	links: [
 		{
 			name: "Gmail",
