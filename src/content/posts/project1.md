@@ -3,7 +3,7 @@ title: AI Resume Analyzer
 published: 2025-07-01
 tags: [Markdown, Blogging, Demo]
 category: Project
-draft: false
+draft: true
 ---
 
 # Building an AI Resume Analyzer with Serverless Technology: A Journey into the Future of Web Development
