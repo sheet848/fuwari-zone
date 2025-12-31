@@ -5,6 +5,8 @@ description: How to use this blog template.
 image: ./dasboard.png
 tags: ["Fuwari", "Blogging", "Customization"]
 category: Project
+github: https://github.com/sheet848/admin-dashboard
+live: https://admin-dashboard-one-ecru-48.vercel.app/
 draft: false
 ---
 # Building a Production-Ready React Admin Dashboard: A Complete Journey
