@@ -3,7 +3,7 @@ title: Video Annotation Tool
 published: 2025-07-01
 tags: [Markdown, Blogging, Demo]
 category: Project
-draft: false
+draft: true
 ---
 
 # Building a Video Annotation Tool: From YouTube API to Redux State Management
