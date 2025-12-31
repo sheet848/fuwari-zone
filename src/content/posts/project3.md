@@ -3,7 +3,7 @@ title: Real-Time Chat Application
 published: 2025-07-22
 tags: [Markdown, Blogging, Demo]
 category: Projects
-draft: false
+draft: true
 ---
 
 # Building a Production Real-Time Chat Application: Mastering Supabase, WebSockets, and Optimistic Updates
