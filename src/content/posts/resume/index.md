@@ -1,17 +1,11 @@
 ---
 title: AI Resume Analyzer
 published: 2024-04-01
-description:
+description: "How to use this blog template."
 image: ./resume.png
-tags:
-  - Project
+tags: ["Fuwari", "Blogging", "Customization"]
 category: Project
 draft: false
----
-# Building an AI Resume Analyzer with Serverless Technology: A Journey into the Future of Web Development
-
-Here’s a **concise, blog-ready version** that keeps the _essence, learnings, and technical credibility_ without overwhelming the reader. This works well as a **portfolio blog**, **Medium post**, or **project write-up**.
-
 ---
 
 # Building an AI Resume Analyzer with Serverless Tech
