@@ -3,10 +3,7 @@ title: Video Annotation Tool
 published: 2024-04-01
 description: How to use this blog template.
 image: ./video.png
-tags:
-  - Fuwari
-  - Blogging
-  - Customization
+tags: ["Fuwari", "Blogging", "Customization"]
 category: Project
 draft: false
 ---
