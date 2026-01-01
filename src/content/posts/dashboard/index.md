@@ -16,12 +16,10 @@ Recently, I completed a comprehensive React admin dashboard project that transfo
 
 In this post, I'll share my journey building this dashboard from scratch, the challenges I encountered, the solutions I discovered, and the valuable lessons that will shape my future projects.
 
-::github{repo="sheet848/admin-dashboard"}
-
-<div class="link-card">
-  <h2>Discover this Project</h2>
-  <p><strong>GitHub Link:</strong> <a href="https://github.com/sheet848/admin-dashboard">https://github.com/sheet848/admin-dashboard</a></p>
-  <p><strong>See Live:</strong> <a href="https://admin-dashboard-one-ecru-48.vercel.app/">https://admin-dashboard-one-ecru-48.vercel.app/</a></p>
+<div class="link-card block btn-regular px-6 py-4 rounded-2xl" style="display: block">
+  <p class="font-bold text-2xl">Discover this Project</p>
+  <p><strong>GitHub Link:</strong> <a href="https://github.com/sheet848/admin-dashboard" target="_blank">https://github.com/sheet848/admin-dashboard</a></p>
+  <p><strong>See Live:</strong> <a href="https://admin-dashboard-one-ecru-48.vercel.app/" target="_blank">https://admin-dashboard-one-ecru-48.vercel.app/</a></p>
 </div>
 
 ## Project Overview
