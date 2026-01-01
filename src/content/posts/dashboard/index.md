@@ -9,13 +9,14 @@ github: https://github.com/sheet848/admin-dashboard
 live: https://admin-dashboard-one-ecru-48.vercel.app/
 draft: false
 ---
-# Building a Production-Ready React Admin Dashboard: A Complete Journey
 
 ## Introduction
 
 Recently, I completed a comprehensive React admin dashboard project that transformed my understanding of building enterprise-level applications. This wasn't just another tutorial project—it was an intensive dive into production-grade packages, architectural patterns, and best practices used by professional development teams.
 
 In this post, I'll share my journey building this dashboard from scratch, the challenges I encountered, the solutions I discovered, and the valuable lessons that will shape my future projects.
+
+::github{repo="sheet848/admin-dashboard"}
 
 ## Project Overview
 
