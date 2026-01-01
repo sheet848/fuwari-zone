@@ -27,7 +27,6 @@ The admin dashboard is a fully-featured application with:
 - Form validation system
 - Interactive calendar
 - Collapsible sidebar navigation
-- Professional UI/UX design
 
 ## The Tech Stack: Why These Choices Matter
 
@@ -171,29 +170,6 @@ The project structure taught me about feature-based organization:
 
 **Avoiding Over-nesting**: I learned to keep folder structures flat. Instead of components/dashboard/widgets/StatBox, it's simply components/StatBox. Easier navigation, less cognitive load.
 
-## CSS Grid: Modern Layout System
-
-### Grid for Dashboard Layout
-
-The dashboard uses CSS Grid extensively:
-
-**12-Column System**: Dividing the layout into 12 columns provided flexibility. Components span different numbers of columns (3, 4, 8, 12) creating varied, interesting layouts.
-
-**Grid Auto Rows**: Setting `grid-auto-rows: 140px` with `gap: 20px` created consistent spacing without manual margin management.
-
-**Span Keyword**: Using `grid-column: span 4` made responsive layouts intuitive. A component that's `span 4` takes one-third of a 12-column grid.
-
-**Grid Row Spanning**: For taller components, `grid-row: span 2` doubles the height. This creates visual hierarchy naturally.
-
-### Grid vs Flexbox
-
-I learned when to use each:
-
-- **Grid**: For two-dimensional layouts (rows and columns)
-- **Flexbox**: For one-dimensional layouts (header bars, button groups)
-
-The dashboard header uses Flexbox (single row, space-between), while the main content area uses Grid (multiple rows and columns with varying sizes).
-
 ## React Pro Sidebar: Navigation Patterns
 
 ### Configuration Challenges
@@ -231,66 +207,6 @@ Trying to build a data grid or calendar from scratch would take months. Using ba
 ### 4. Theme Consistency Creates Polish
 
 Small details matter: matching scrollbar colors to the theme, consistent border radius values, unified color palettes. These seemingly minor touches separate amateur from professional applications.
-
-### 5. Developer Experience Affects Code Quality
-
-Tools like:
-
-- VS Code IntelliSense
-- Prettier for formatting
-- Material-UI's component documentation
-- Hot reloading with React
-
-These made development enjoyable and bugs less frequent.
-
-## Challenges and How I Overcame Them
-
-### Challenge 1: Material-UI DataGrid Styling
-
-**Problem**: Default DataGrid styling didn't match my theme. The grid had borders, colors, and spacing that clashed.
-
-**Solution**: I learned to use the `sx` prop to target DataGrid's internal CSS classes. Using the browser DevTools, I inspected elements to find class names like `.MuiDataGrid-root` and `.MuiDataGrid-cell`, then overrode their styles.
-
-**Lesson**: DevTools is essential for styling third-party components. Inspect, identify, override.
-
-### Challenge 2: Form Validation UX
-
-**Problem**: Showing all errors immediately when a form loads is jarring and unfriendly.
-
-**Solution**: Formik's `touched` state tracks which fields users have interacted with. Combining `touched` and `errors` creates a better UX:
-
-```javascript
-error={!!touched.email && !!errors.email}
-helperText={touched.email && errors.email}
-```
-
-Only show errors for fields the user has touched.
-
-**Lesson**: Good UX requires thoughtful state management. Don't just dump all errors on the user.
-
-### Challenge 3: Calendar State Management
-
-**Problem**: FullCalendar manages its own state, but I needed to display events in a sidebar list. How to sync state between the calendar and React?
-
-**Solution**: FullCalendar provides an `eventsSet` callback that fires whenever events change. Using this callback to update React state kept everything synchronized.
-
-**Lesson**: When integrating libraries with internal state, look for callbacks and event handlers to bridge the gap.
-
-### Challenge 4: Nivo Chart Theming
-
-**Problem**: Nivo charts looked beautiful but didn't match my app's color scheme. Text was invisible on dark backgrounds.
-
-**Solution**: Nivo accepts a `theme` prop with extensive customization options. I created a theme object matching my app's colors for axes, legends, tooltips, and grid lines.
-
-**Lesson**: Most quality libraries provide theming systems. Read the documentation instead of fighting the defaults.
-
-### Challenge 5: Geography Chart Setup
-
-**Problem**: The geography chart required a massive GeoJSON file with world coordinates. Finding and formatting this data was confusing.
-
-**Solution**: Nivo's documentation linked to their example GeoJSON file. I copied this file directly into my project. For data, I created a simple array mapping country codes to values.
-
-**Lesson**: Don't reinvent the wheel. Use example data from documentation, modify it later.
 
 ## What I'd Do Differently
 
@@ -354,7 +270,3 @@ This project is now a centerpiece of my portfolio and a reference point for futu
 - **Nivo Charts**: https://nivo.rocks
 - **FullCalendar**: https://fullcalendar.io
 - **React Router**: https://reactrouter.com
-
----
-
-_Have you built an admin dashboard? What challenges did you face? Share your experiences in the comments below!_
