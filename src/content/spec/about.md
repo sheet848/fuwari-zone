@@ -1,4 +1,3 @@
-# About
 # Hi, I'm Sheetal Naik. Nice to Meet You
 
 I’m a frontend developer with 3+ years of experience building sleek, scalable, and intuitive web applications.
