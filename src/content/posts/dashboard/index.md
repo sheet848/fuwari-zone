@@ -18,6 +18,12 @@ In this post, I'll share my journey building this dashboard from scratch, the ch
 
 ::github{repo="sheet848/admin-dashboard"}
 
+<div class="link-card">
+  <h2>Discover this Project</h2>
+  <p><strong>GitHub Link:</strong> <a href="https://github.com/sheet848/admin-dashboard">https://github.com/sheet848/admin-dashboard</a></p>
+  <p><strong>See Live:</strong> <a href="https://admin-dashboard-one-ecru-48.vercel.app/">https://admin-dashboard-one-ecru-48.vercel.app/</a></p>
+</div>
+
 ## Project Overview
 
 The admin dashboard is a fully-featured application with:
