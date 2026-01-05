@@ -5,6 +5,8 @@ description: How to use this blog template.
 image: ./video.png
 tags: ["Fuwari", "Blogging", "Customization"]
 category: Project
+github: https://github.com/sheet848/admin-dashboard
+live: https://admin-dashboard-one-ecru-48.vercel.app/
 draft: false
 ---
 # Building a Video Annotation Tool: From YouTube API to Redux State Management
