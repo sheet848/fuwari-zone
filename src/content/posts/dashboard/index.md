@@ -39,8 +39,6 @@ The admin dashboard is a fully-featured application with:
 
 Before this project, I viewed UI libraries as simple component collections. Material-UI changed that perspective entirely. I learned that MUI is actually a complete design system with:
 
-**The Box Component Revolution**: The Box component became my go-to tool. Instead of creating separate CSS files, I could write styles directly on components using props like `display="flex"` or use the `sx` prop for more complex styling. This inline approach significantly improved my development speed because the styling lives right next to the component—no jumping between files.
-
 **Theme Provider Power**: Setting up the theme system taught me about design tokens and scalable theming. By creating a centralized color system with multiple shades (100-900), I could maintain visual consistency while easily switching between light and dark modes. The `useTheme` hook made accessing these values trivial throughout the application.
 
 ### React Router: Navigation Architecture
