@@ -16,6 +16,14 @@ Job hunting often fails silently—not because of skill gaps, but because resume
 
 What makes this project different is the architecture: **no backend code, no infrastructure setup, and zero hosting cost**. Everything runs on the frontend using **Puter.js**, a platform that brings authentication, storage, databases, and AI directly to the browser.
 
+👉 **Project credit:** Based on the work and teaching of [@Adrian Hajdin / JavaScript Mastery](#) on YouTube.
+
+<div class="link-card block btn-regular px-6 py-4 rounded-2xl" style="display: block">
+  <p class="font-bold text-2xl">Discover this Project</p>
+  <p><strong>GitHub Link:</strong> <a href="https://github.com/sheet848/admin-dashboard" target="_blank">https://github.com/sheet848/admin-dashboard</a></p>
+  <p><strong>See Live:</strong> <a href="https://admin-dashboard-one-ecru-48.vercel.app/" target="_blank">https://admin-dashboard-one-ecru-48.vercel.app/</a></p>
+</div>
+
 ---
 
 ## What I Built
