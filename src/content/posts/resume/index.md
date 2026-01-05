@@ -23,50 +23,33 @@ What makes this project different is the architecture: **no backend code, no inf
 The app allows users to:
 
 - Upload PDF resumes via drag-and-drop
-    
 - Match resumes against job descriptions
-    
 - Generate ATS scores (0–100)
-    
 - Receive AI feedback across multiple categories
-    
-- Store resumes securely in the cloud
-    
 
 **Tech Stack**
 
 - React 19 + React Router v7
-    
 - TypeScript
-    
 - Tailwind CSS v4
-    
 - Puter.js (auth, storage, DB, AI)
-    
 - Claude Sonnet for analysis
-    
 
 ---
-
-## The Breakthrough: Puter.js
+## Puter.js
 
 Traditionally, building this app would require OAuth setup, databases, file storage, backend APIs, and deployment—easily 40+ hours before shipping features.
 
 With **one script tag**, Puter.js provided:
 
 - OAuth authentication
-    
 - Cloud file storage
-    
 - Key-value database
-    
 - Free AI models
-    
 
 All without writing backend code. This fundamentally changed how I think about “full-stack” development.
 
 ---
-
 ## Key Engineering Decisions
 
 ### 1. Wrapping Puter.js with Zustand
@@ -74,13 +57,9 @@ All without writing backend code. This fundamentally changed how I think about �
 To integrate Puter cleanly with React, I built a Zustand-based wrapper that:
 
 - Centralized auth, storage, and AI access
-    
 - Eliminated prop drilling
-    
 - Managed loading and auth state cleanly
-    
 - Improved type safety and testability
-    
 
 This reinforced when and _why_ wrapping third-party libraries is worth the effort.
 
@@ -111,44 +90,20 @@ Moving data fetching into route loaders removed loading boilerplate, simplified 
 AI analysis takes time, so I added:
 
 - Step-by-step status updates
-    
 - File validation and previews
-    
 - Clear error states
-    
 
 Users don’t mind waiting if they know _what’s happening_.
-
----
-
-## Deployment & Cost Model
-
-Deployment was simple:
-
-1. Build the app
-    
-2. Upload to Puter
-    
-3. Click deploy
-    
-
-The standout benefit? **User-pays model**.  
-Each user consumes their own storage and AI quota, so even with thousands of users, my hosting cost remains **zero**—ideal for indie developers and students.
 
 ---
 
 ## Key Takeaways
 
 - Serverless frontend platforms can eliminate entire backend layers
-    
 - Zustand is a powerful, simpler alternative to Redux for many apps
-    
 - Structured AI prompting is non-negotiable for production use
-    
 - TypeScript pays off massively in medium-to-large projects
-    
 - Polish and UX details separate “working” from “professional”
-    
 
 ---
 
@@ -161,8 +116,6 @@ The future of web development is already here: **frontend-first, serverless, and
 ---
 ## Resources
 
-- **Live Demo**: [Your Puter App URL]
-- **Source Code**: [Your GitHub Repo]
 - **Puter.js Docs**: https://docs.puter.com
 - **React Router v7**: https://reactrouter.com
 - **Tailwind CSS**: https://tailwindcss.com
