@@ -37,11 +37,11 @@ The AI Resume Analyzer is a full-stack application that:
 
 **Tech Stack:**
 
-- React 19 with React Router v7
-- TypeScript for type safety
-- Tailwind CSS v4 for styling
-- Puter.js for backend services
-- Claude Sonnet for AI analysis
+- **React 19** with **React Router v7**
+- **TypeScript** for type safety
+- **Tailwind CSS v4** for styling
+- **Puter.js** for backend services
+- **Claude Sonnet** for AI analysis
 
 ## Discovering Puter.js
 
