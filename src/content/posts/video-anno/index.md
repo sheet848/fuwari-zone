@@ -1,12 +1,11 @@
 ---
 title: Video Annotation Tool
-published: 2024-04-01
-description: How to use this blog template.
+published: 2025-04-11
+description: Video annotation app with timestamp capture and playback synchronization
 image: ./video.png
-tags: ["Fuwari", "Blogging", "Customization"]
 category: Project
-github: "https://github.com/sheet848/admin-dashboard"
-live: "https://admin-dashboard-one-ecru-48.vercel.app/"
+github: https://github.com/sheet848/video-annotate
+live: https://video-annotate.vercel.app/
 draft: false
 ---
 # Building a Video Annotation Tool: From YouTube API to Redux State Management
@@ -14,6 +13,18 @@ draft: false
 ## Introduction
 
 Ever tried to take notes while watching a video tutorial? You pause, write the timestamp, type your note, resume playback—it's tedious. I wanted a better solution, so I built a video annotation tool that automatically captures timestamps and lets you jump to any moment with a single click.
+
+In this post, I'll walk you through building a production-ready video annotation application using Vite, React, and Redux. More importantly, I'll share the architectural decisions, the challenges I faced, and why certain patterns made all the difference.
+
+<div class="link-card block btn-regular px-6 py-4 rounded-2xl" style="display: block">
+  <p class="font-bold text-2xl">Discover this Project</p>
+  <p><strong>GitHub Link:</strong> <a href="https://github.com/sheet848/video-annotate" target="_blank">https://github.com/sheet848/video-annotate</a></p>
+  <p><strong>See Live:</strong> <a href="https://video-annotate.vercel.app/" target="_blank">https://video-annotate.vercel.app/</a></p>
+</div>
+
+# Building a Video Annotation Tool: From YouTube API to Redux State Management
+
+## Introduction
 
 In this post, I'll walk you through building a production-ready video annotation application using Vite, React, and Redux. More importantly, I'll share the architectural decisions, the challenges I faced, and why certain patterns made all the difference.
 
@@ -31,17 +42,6 @@ In this post, I'll walk you through building a production-ready video annotation
 **Why this project matters:** Video annotation is used in education, content creation, research, and accessibility. Understanding how to build it teaches you state management, external API integration, file handling, and real-time UI updates—skills that transfer to countless other applications.
 
 ## Tech Stack: Why These Choices?
-
-### Vite Over Create React App
-
-I chose Vite because:
-
-- **Instant dev server start** (< 500ms vs 10+ seconds)
-- **Lightning-fast HMR** (changes reflect instantly)
-- **Optimized production builds** (better tree-shaking)
-- **Modern by default** (ES modules, native TypeScript)
-
-Create React App felt like using dial-up internet after experiencing Vite's speed.
 
 ### Redux Toolkit Over useState
 
@@ -82,8 +82,6 @@ The YouTube IFrame API was both powerful and frustrating. Here's what I learned:
 - Cross-origin restrictions
 - API loading race conditions
 - Documentation gaps
-
-I'll show you how I solved these problems.
 
 ## Architecture: The Foundation
 
@@ -285,10 +283,6 @@ For uploaded files, I used the standard HTML5 video element:
 />
 ```
 
-**Why not use a library?**
-
-Native HTML5 video works great for basic playback. No need for video.js or similar libraries unless you need advanced features.
-
 ## Annotation Management: CRUD Operations
 
 ### Creating Annotations
@@ -422,42 +416,6 @@ const formatTimestamp = (seconds) => {
 
 Clean, readable, easy to paste into notes.
 
-## Challenges and Solutions
-
-### Challenge 1: YouTube API Race Conditions
-
-**Problem:** Sometimes player would initialize before API loaded, causing crashes.
-
-**Solution:** Promise-based API loading with await before player creation.
-
-### Challenge 2: State Update Frequency
-
-**Problem:** Updating Redux every 16ms (60fps) caused performance issues.
-
-**Solution:** Reduced to 100ms intervals. Still smooth, no performance hit.
-
-### Challenge 3: Memory Leaks with Object URLs
-
-**Problem:** Creating object URLs for uploaded videos without cleanup caused memory leaks.
-
-**Solution:** `useEffect` cleanup function to revoke URLs:
-
-```javascript
-return () => URL.revokeObjectURL(url);
-```
-
-### Challenge 4: Cross-Origin Video Issues
-
-**Problem:** Some uploaded videos had CORS issues.
-
-**Solution:** All video processing happens client-side. No server uploads needed.
-
-### Challenge 5: Modal State Management
-
-**Problem:** Modal open/close state tied to annotation data caused bugs.
-
-**Solution:** Separated UI state (isModalOpen) from data state (annotations).
-
 ## Performance Optimization
 
 ### Memoization
@@ -479,26 +437,11 @@ const AnnotationItem = React.memo(({ annotation, isActive, onClick }) => {
 
 Reduced re-renders by 90%.
 
-### Redux Selector Optimization
-
-```javascript
-const selectSortedAnnotations = createSelector(
-  state => state.annotations,
-  annotations => [...annotations].sort((a, b) => a.timestamp - b.timestamp)
-);
-```
-
-Sorting only happens when annotations change, not on every render.
-
 ## What I'd Do Differently
 
 ### 1. Add TypeScript
 
 JavaScript was fine for prototyping, but TypeScript would've caught several bugs earlier. Type-safe Redux actions would've been especially helpful.
-
-### 2. Implement Undo/Redo
-
-Redux makes this trivial. Should've added it from the start.
 
 ### 3. Add Annotation Categories
 
@@ -508,40 +451,16 @@ Let users tag annotations (question, important, note). Makes searching easier.
 
 Annotations disappear on page refresh. Should've added localStorage persistence or a backend.
 
-### 5. Better Mobile Support
-
-Works on mobile, but controls are cramped. Needs responsive design improvements.
-
 ## Key Learnings
 
 1. **Redux Isn't Overkill**: For complex state, Redux simplifies everything. The boilerplate pays off.
-    
 2. **External APIs Need Error Handling**: YouTube API can fail. Always have fallbacks.
-    
 3. **Performance Matters**: 100ms timer updates vs 16ms makes huge difference.
-    
 4. **User Feedback Is Essential**: Loading states, success messages, error handling—users need to know what's happening.
-    
-5. **Vite Is Fast**: Development speed improved 10x compared to Create React App.
-    
 
 ## Conclusion
 
-Building this video annotation tool taught me about:
-
-- Complex state management with Redux
-- External API integration (YouTube)
-- File handling and object URLs
-- Real-time UI synchronization
-- Performance optimization
-- Clean component architecture
-
-The most valuable lesson? **Start with architecture.** I spent time designing the Redux store structure upfront. That investment paid off as features grew. Adding new capabilities never required refactoring the core.
+Building this video annotation tool made me spend time designing the Redux store structure upfront. That investment paid off as features grew. Adding new capabilities never required refactoring the core.
 
 If you're building anything with video, time-based data, or complex state, these patterns will serve you well.
 
----
-
-## Try It Yourself
-
-**Live Demo:** https://video-annotate.vercel.app **Source Code:** https://github.com/sheet848/video-annotate
