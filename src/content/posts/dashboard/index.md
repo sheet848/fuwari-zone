@@ -3,7 +3,7 @@ title: React Admin Dashboard
 published: 2024-05-12
 description: Enterprise dashboard with advanced data tables and chart visualizations
 image: ./dasboard.png
-category: Project
+category: Projects
 github: https://github.com/sheet848/admin-dashboard
 live: https://admin-dashboard-react-she12.vercel.app/
 draft: false
