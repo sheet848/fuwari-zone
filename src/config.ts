@@ -51,7 +51,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "Resume",
-			url: "/Sheetal Naik Resume.pdf",
+			url: "/Sheetal-Naik-Resume.pdf",
 			external: true,
 		},
 	],
