@@ -5,6 +5,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_shield&issueType=license)
 
 A static blog template built with [Astro](https://astro.build).
+Also using it as my Portfolio
 
 [**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)
 
