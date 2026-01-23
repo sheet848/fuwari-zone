@@ -2,7 +2,6 @@
 title: Video Annotation Tool
 published: 2025-04-11
 description: Video annotation app with timestamp capture and playback synchronization
-image: ./video.png
 category: Projects
 github: https://github.com/sheet848/video-annotate
 live: https://video-annotate.vercel.app/
