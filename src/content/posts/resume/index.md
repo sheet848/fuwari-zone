@@ -2,7 +2,6 @@
 title: AI Resume Analyzer
 published: 2025-07-22
 description: Serverless AI tool providing ATS scores and resume feedback
-image: ./resume.png
 category: Projects
 github: https://github.com/sheet848/ai-resume-analyzer
 live: https://ai-resume-analyzer-she12.vercel.app/
